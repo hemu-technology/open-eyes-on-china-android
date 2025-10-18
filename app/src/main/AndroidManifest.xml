@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Declare touchscreen not strictly required so app can run on large ChromeOS/tablet devices without touch -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
@@ -11,17 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
+
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <!-- SplashActivity becomes launcher; it initializes ads then routes to EnhancedMainActivity -->
         <activity
-            android:name=".EnhancedMainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:label="Open Eyes on China"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.App">
+            android:theme="@style/Theme.App.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EnhancedMainActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="Open Eyes on China"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.App" />
     </application>
 </manifest>

@@ -44,10 +44,14 @@ android {
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    // Explicit BOM version aligned with Kotlin plugin to avoid metadata mismatch errors
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:2.1.0"))
     implementation("androidx.core:core-ktx:1.13.1")
+    // SplashScreen API support library
+    implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("com.google.android.gms:play-services-ads:24.7.0")
 }

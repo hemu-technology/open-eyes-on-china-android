@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid base color (fallback for older APIs) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0D1B2A" />
+        </shape>
+    </item>
+    <!-- Radial highlight -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="600dp" android:height="600dp" />
+            <gradient
+                android:type="radial"
+                android:startColor="#173B5F"
+                android:centerColor="#102A44"
+                android:endColor="#0D1B2A"
+                android:gradientRadius="300dp" />
+        </shape>
+    </item>
+</layer-list>

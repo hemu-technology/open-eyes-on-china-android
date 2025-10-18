@@ -5,4 +5,16 @@
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:navigationBarColor">@color/navigation_bar_color</item>
     </style>
+
+    <!-- Splash theme using AndroidX SplashScreen API (Android 12+ native + fallback) -->
+    <style name="Theme.App.Splash" parent="Theme.App">
+        <!-- Use solid brand color for guaranteed early draw; gradient can be applied later in code -->
+        <item name="android:windowSplashScreenBackground">@color/status_bar_color</item>
+        <!-- Animated vector icon -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_logo_animated</item>
+        <!-- Animation duration is ignored for looping animated-vector; keep a nominal value -->
+        <item name="android:windowSplashScreenAnimationDuration">500</item>
+        <!-- Post-splash theme to apply -->
+        <item name="postSplashScreenTheme">@style/Theme.App</item>
+    </style>
 </resources>

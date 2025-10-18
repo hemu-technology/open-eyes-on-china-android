@@ -5,5 +5,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "OpenEyesOnChina"
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "open-eyes-on-china-android"
 include(":app")

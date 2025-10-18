@@ -1,0 +1,4 @@
+<resources>
+    <!-- Larger side padding on tablets -->
+    <dimen name="webview_side_margin">64dp</dimen>
+</resources>

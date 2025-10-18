@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="160dp"
-    android:height="160dp"
-    android:viewportWidth="160"
-    android:viewportHeight="160">
-    <group android:name="rotationGroup" android:pivotX="80" android:pivotY="80">
-        <!-- Outer ring -->
-        <path
-            android:fillColor="#1E88E5"
-            android:pathData="M80,8A72,72 0 1 0 80,152A72,72 0 1 0 80,8ZM80,20A60,60 0 1 1 20,80A60,60 0 0 1 80,20Z"/>
-        <!-- Inner globe stylized -->
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Eye outline -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M54,18C30,18 12,40 8,54C12,68 30,90 54,90C78,90 96,68 100,54C96,40 78,18 54,18Z"/>
+
+    <!-- Sclera -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30C36,30 22,46 19,54C22,62 36,78 54,78C72,78 86,62 89,54C86,46 72,30 54,30Z"/>
+
+    <!-- Iris -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M54,38A16,16 0 0 0 38,54A16,16 0 0 0 54,70A16,16 0 0 0 70,54A16,16 0 0 0 54,38Z"/>
+
+    <!-- ========== STARS SECTION (adjust X/Y via group translate) ========== -->
+
+    <!-- Large star -->
+    <group
+        android:name="big_star"
+        android:translateX="50"
+        android:translateY="45"> <!-- 调整大星星位置 -->
         <path
             android:fillColor="#FFFFFF"
-            android:pathData="M80,34A46,46 0 0 0 34,80A46,46 0 0 0 80,126A46,46 0 0 0 126,80A46,46 0 0 0 80,34ZM80,46A34,34 0 0 1 114,80A34,34 0 0 1 80,114A34,34 0 0 1 46,80A34,34 0 0 1 80,46Z"/>
+            android:pathData="M0,0L2,6L8,6L3,10L5,16L0,12.5L-5,16L-3,10L-8,6L-2,6Z"/>
     </group>
+
+    <!-- Small star 1 -->
+    <group
+        android:name="small_star_1"
+        android:translateX="62"
+        android:translateY="44"> <!-- 调整第一颗小星星位置 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+    </group>
+
+    <!-- Small star 2 -->
+    <group
+        android:name="small_star_2"
+        android:translateX="65"
+        android:translateY="49"> <!-- 调整第二颗小星星位置 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+    </group>
+
+    <!-- Small star 3 -->
+    <group
+        android:name="small_star_3"
+        android:translateX="65"
+        android:translateY="55"> <!-- 调整第三颗小星星位置 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+    </group>
+
+    <!-- Small star 4 -->
+    <group
+        android:name="small_star_4"
+        android:translateX="62"
+        android:translateY="60"> <!-- 调整第四颗小星星位置 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+    </group>
+
 </vector>

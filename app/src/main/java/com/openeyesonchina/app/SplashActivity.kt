@@ -9,6 +9,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.ProgressBar
+import java.util.Calendar
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 /**
@@ -36,7 +37,12 @@ class SplashActivity : ComponentActivity() {
         val logo = findViewById<ImageView>(R.id.splashLogo)
         val title = findViewById<TextView>(R.id.splashTitle)
         val tagline = findViewById<TextView>(R.id.splashTagline)
-        val progress = findViewById<ProgressBar>(R.id.splashProgress)
+    val progress = findViewById<ProgressBar>(R.id.splashProgress)
+    val copyright = findViewById<TextView>(R.id.splashCopyright)
+
+    // Dynamic year
+    val year = Calendar.getInstance().get(Calendar.YEAR)
+    copyright.text = getString(R.string.splash_copyright_template, year)
 
         // Intro animations
         logo.alpha = 0f
@@ -49,6 +55,7 @@ class SplashActivity : ComponentActivity() {
             tagline.animate().alpha(1f).setStartDelay(200).setDuration(400).start()
             progress.animate().alpha(1f).setStartDelay(400).setDuration(300).start()
         }.start()
+
 
         // Initialize and load ad. Proceed decision considers min and max wait.
         AdManager.initializeMobileAds(this) {
@@ -78,4 +85,5 @@ class SplashActivity : ComponentActivity() {
             finish()
         }
     }
+
 }

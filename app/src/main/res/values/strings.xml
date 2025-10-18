@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Open Eyes on China</string>
     <string name="default_url">https://openeyesonchina.com/</string>
+    <string name="splash_tagline">Insight. Context. Perspective.</string>
+    <string name="splash_copyright_template">© %1$d Open Eyes on China</string>
+    <string name="brand_name_upper">OPEN EYES ON CHINA</string>
 </resources>

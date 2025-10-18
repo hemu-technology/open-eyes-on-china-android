@@ -1,0 +1,6 @@
+<resources>
+    <!-- Brand/dark bar color matching site header (adjust as needed) -->
+    <color name="status_bar_color">#001E26</color>
+    <color name="navigation_bar_color">#001E26</color>
+</resources>
+

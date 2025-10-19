@@ -54,4 +54,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("com.google.android.gms:play-services-ads:24.7.0")
+    // Offline caching (OkHttp client with disk cache)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    // WorkManager for scheduled offline prefetch tasks
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
 }

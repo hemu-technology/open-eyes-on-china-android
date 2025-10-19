@@ -24,5 +24,22 @@
             android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+        <!-- Offline status banner (hidden by default) -->
+        <TextView
+            android:id="@+id/offlineBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/offline_banner_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="Offline"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
     </FrameLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

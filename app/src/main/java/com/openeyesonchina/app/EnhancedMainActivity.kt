@@ -37,6 +37,7 @@ class EnhancedMainActivity : ComponentActivity() {
         val webView = binding.webView
         val swipe = binding.swipeRefresh
         val progressBar = binding.progressBar
+    val offlineBanner = binding.offlineBanner
 
         with(webView.settings) {
             javaScriptEnabled = true
@@ -49,8 +50,9 @@ class EnhancedMainActivity : ComponentActivity() {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
                 forceDark = WebSettings.FORCE_DARK_AUTO
             }
-            cacheMode = WebSettings.LOAD_DEFAULT
         }
+        // Configure offline caching strategy (adjust cacheMode if offline)
+        OfflineWebViewHelper.configure(webView, this)
         CookieManager.getInstance().setAcceptCookie(true)
 
         val density = resources.displayMetrics.density
@@ -74,18 +76,12 @@ class EnhancedMainActivity : ComponentActivity() {
             }
         }
 
-        webView.webViewClient = object : WebViewClient() {
-            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
-                swipe.isRefreshing = userInitiatedRefresh
-            }
-            override fun onPageFinished(view: WebView?, url: String?) {
-                swipe.isRefreshing = false
-                userInitiatedRefresh = false
-                progressBar.visibility = View.GONE
-            }
-            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-                return false
-            }
+        webView.webViewClient = OfflineWebViewClient(
+            this,
+            offlineBannerProvider = { runOnUiThread { offlineBanner.visibility = View.VISIBLE } },
+            onlineBannerProvider = { runOnUiThread { offlineBanner.visibility = View.GONE } }
+        ).apply {
+            // Additional overrides via anonymous subclass if necessary
         }
 
         if (savedInstanceState == null) {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Play Store 512x512 marketing icon (transparent background) generated from ic_launcher_foreground.xml -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 108 108">
+  <!-- Eye outline -->
+  <path fill="#C62828" d="M54,18C30,18 12,40 8,54C12,68 30,90 54,90C78,90 96,68 100,54C96,40 78,18 54,18Z"/>
+  <!-- Sclera -->
+  <path fill="#FFFFFF" d="M54,30C36,30 22,46 19,54C22,62 36,78 54,78C72,78 86,62 89,54C86,46 72,30 54,30Z"/>
+  <!-- Iris -->
+  <path fill="#C62828" d="M54,38A16,16 0 0 0 38,54A16,16 0 0 0 54,70A16,16 0 0 0 70,54A16,16 0 0 0 54,38Z"/>
+  <!-- Large central star -->
+  <g transform="translate(50 45)">
+    <path fill="#FFFFFF" d="M0,0L2,6L8,6L3,10L5,16L0,12.5L-5,16L-3,10L-8,6L-2,6Z"/>
+  </g>
+  <!-- Four small stars (positions adapted from vector) -->
+  <g transform="translate(62 44)">
+    <path fill="#FFFFFF" d="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+  </g>
+  <g transform="translate(65 49)">
+    <path fill="#FFFFFF" d="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+  </g>
+  <g transform="translate(65 55)">
+    <path fill="#FFFFFF" d="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+  </g>
+  <g transform="translate(62 60)">
+    <path fill="#FFFFFF" d="M0,0l0.6,1.2l1.4,0.1l-1.1,0.8l0.4,1.4l-1.2-0.7l-1.2,0.7l0.4-1.4l-1.1-0.8l1.4-0.1z"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open Eyes on China (Offline)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 24px; background:#fafafa; color:#222; }
+    header { margin-bottom: 16px; }
+    h1 { font-size: 20px; margin: 0 0 12px; color:#c62828; }
+    .banner { background:#c62828; color:#fff; padding:8px 12px; border-radius:8px; display:inline-block; }
+    .tips { margin-top:24px; font-size:14px; line-height:1.4; }
+    a { color:#c62828; }
+    .stars { font-size:12px; color:#888; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">Offline Mode</div>
+    <h1>Open Eyes on China</h1>
+    <p>You're viewing the offline snapshot. Some images and recent articles may be missing.</p>
+  </header>
+  <section>
+    <h2>What you can do offline</h2>
+    <ul>
+      <li>Read cached pages you opened previously.</li>
+      <li>Browse this fallback overview.</li>
+    </ul>
+  </section>
+  <section class="tips">
+    <strong>Tips:</strong> Reconnect to refresh content, or relaunch the app once online.
+  </section>
+  <footer class="stars">&copy; <span id="year"></span> Open Eyes on China</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
